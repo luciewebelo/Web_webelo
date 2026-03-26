@@ -15,20 +15,7 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 if (menuToggle) {
     menuToggle.addEventListener('click', () => {
-        if (navLinks.style.display === 'flex') {
-            navLinks.style.display = 'none';
-        } else {
-            navLinks.style.display = 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.width = '100%';
-            navLinks.style.background = 'rgba(26,39,68,0.95)';
-            navLinks.style.padding = '1rem 0';
-            navLinks.style.alignItems = 'center';
-            navLinks.style.gap = '1rem';
-        }
+        navLinks.classList.toggle('nav-open');
     });
 }
 

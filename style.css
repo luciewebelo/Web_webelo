@@ -1,3 +1,26 @@
+/* Font Awesome font-display: swap override */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2") format("woff2");
+}
+
 /* Reset and Variables */
 :root {
   --primary: #111a2c;
@@ -527,6 +550,7 @@ section { padding: 100px 0; }
 
 @media(max-width: 768px) {
   .nav-links { display: none; }
+  .nav-links.nav-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(26,39,68,0.95); padding: 1rem 0; align-items: center; gap: 1rem; }
   .dropdown-menu { position: static; transform: none; border: none; box-shadow: none; padding: 0 0 0 1rem; background: transparent; }
   .nav-dropdown > a::after { display: none; }
   .nav-dropdown .dropdown-menu { display: block; }
