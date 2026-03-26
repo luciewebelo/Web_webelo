@@ -1,7 +1,22 @@
 {
   "permissions": {
     "allow": [
-      "Bash(powershell -Command \"\\(Get-Content ''/c/Users/louck/OneDrive/Dokumenty/VC weby/webelo/Web_webelo/index.html'' -Encoding UTF8\\) -replace ''\\\\u201c'',''\"\"'' -replace ''\\\\u201d'',''\"\"'' | Set-Content ''/c/Users/louck/OneDrive/Dokumenty/VC weby/webelo/Web_webelo/index.html'' -Encoding UTF8\")"
+      "Bash(powershell -Command \"\\(Get-Content ''/c/Users/louck/OneDrive/Dokumenty/VC weby/webelo/Web_webelo/index.html'' -Encoding UTF8\\) -replace ''\\\\u201c'',''\"\"'' -replace ''\\\\u201d'',''\"\"'' | Set-Content ''/c/Users/louck/OneDrive/Dokumenty/VC weby/webelo/Web_webelo/index.html'' -Encoding UTF8\")",
+      "Bash(cp obrazky/hlavni/favicon.png favicon.png)",
+      "Bash(ls favicon*)",
+      "Bash(powershell -command \"Add-Type -AssemblyName System.Drawing; @\\(''obrazky/hlavni/logo_menu.png'',''obrazky/hlavni/logo_uni.png'',''obrazky/omne/lucie_louckova.jpg'',''obrazky/projekty/bicom.png'',''obrazky/reference/bicom.png''\\) | ForEach-Object { $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $_\\).Path\\); Write-Host \\(''{0}: {1}x{2}'' -f $_, $img.Width, $img.Height\\); $img.Dispose\\(\\) }\")",
+      "Bash(where magick:*)",
+      "Bash(where ffmpeg:*)",
+      "Bash(where cwebp:*)",
+      "Bash(node -e \"require\\(''sharp''\\)\")",
+      "Bash(powershell -command \"Add-Type -AssemblyName System.Drawing; @\\(''obrazky/omne/lucie_louckova.jpg'',''obrazky/omne/lucie_v_kavarne.png'',''obrazky/reference/bicommartina.png'',''obrazky/reference/bicom.png'',''obrazky/hlavni/logo_menu.png'',''obrazky/hlavni/logo_uni.png'',''obrazky/cenik/ai.jpg'',''obrazky/cenik/divi.jpg''\\) | ForEach-Object { if \\(Test-Path $_\\) { $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $_\\).Path\\); $size = \\(Get-Item $_\\).Length; Write-Host \\(''{0}: {1}x{2}px, {3}KB'' -f $_, $img.Width, $img.Height, [math]::Round\\($size/1024\\)\\); $img.Dispose\\(\\) } }\")",
+      "Bash(python3 -c \":*)",
+      "Bash(powershell -Command \"[System.IO.File]::ReadAllBytes\\(''c:\\\\Users\\\\louck\\\\OneDrive\\\\Dokumenty\\\\VC weby\\\\webelo\\\\Web_webelo\\\\sitemap.xml''\\)[0..3] | ForEach-Object { $_ToString\\(''X2''\\) }\")",
+      "Bash(powershell -Command \"$bytes = [System.IO.File]::ReadAllBytes\\(''c:\\\\Users\\\\louck\\\\OneDrive\\\\Dokumenty\\\\VC weby\\\\webelo\\\\Web_webelo\\\\sitemap.xml''\\); $bytes[0..3] | ForEach-Object { $_ToString\\(''X2''\\) }\")",
+      "Bash(powershell -Command \"$path = ''c:\\\\Users\\\\louck\\\\OneDrive\\\\Dokumenty\\\\VC weby\\\\webelo\\\\Web_webelo\\\\sitemap.xml''; $bytes = [System.IO.File]::ReadAllBytes\\($path\\); $bytes[0].ToString\\(''X2''\\) + '' '' + $bytes[1].ToString\\(''X2''\\) + '' '' + $bytes[2].ToString\\(''X2''\\)\")",
+      "Bash(xxd \"c:/Users/louck/OneDrive/Dokumenty/VC weby/webelo/Web_webelo/sitemap.xml\")",
+      "Bash(curl -i https://webelo.cz/sitemap.xml)",
+      "Bash(curl -i https://webelo.cz/)"
     ]
   }
 }

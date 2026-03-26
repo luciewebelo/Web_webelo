@@ -1,17 +1,14 @@
 // Lazy loading pro animace
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 100;
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            revealObserver.unobserve(entry.target);
         }
-    }
-}
-window.addEventListener("scroll", reveal);
-reveal(); // initial check
+    });
+}, { rootMargin: "-100px 0px" });
+
+document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
 // Mobilní menu toggle
 const menuToggle = document.querySelector('.menu-toggle');

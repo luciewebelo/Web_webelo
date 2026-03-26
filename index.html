@@ -25,9 +25,15 @@
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="canonical" href="https://webelo.cz/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css">
 </head>
 
 <body>
@@ -40,7 +46,7 @@
   <header class="navbar" id="navbar">
     <div class="container nav-content">
       <a href="#domu" class="logo">
-        <img src="obrazky/hlavni/logo_menu.png" alt="Logo Webelo" class="logo-img"
+        <img src="obrazky/hlavni/logo_menu.png" alt="Logo Webelo" width="999" height="408" class="logo-img"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
         <div class="logo-icon fallback-logo" style="display: none;">L</div>
         <div class="logo-text">
@@ -66,6 +72,8 @@
       </nav>
     </div>
   </header>
+
+  <main>
 
   <section class="hero dark-bg" id="domu">
     <div class="container hero-content">
@@ -101,7 +109,7 @@
 
       <div class="hero-image-wrapper fade-in-up delay-1">
         <div class="image-inner">
-          <img src="obrazky/omne/lucie_v_kavarne.png" alt="Lucie při práci v kavárně" class="hero-image">
+          <img src="obrazky/omne/lucie_v_kavarne.jpg" alt="Lucie při práci v kavárně" class="hero-image">
           <div class="gradient-overlay"></div>
         </div>
 
@@ -149,7 +157,7 @@
             </div>
           </div>
           <div class="card-footer px-0">
-            <a href="tvorba_divi.html" class="btn btn-primary w-100">ZJISTIT VÍCE <i
+            <a href="tvorba_divi.html" aria-label="Zjistit více o tvorbě webu v Divi" class="btn btn-primary w-100">ZJISTIT VÍCE <i
                 class="fas fa-chevron-right ml-1"></i></a>
           </div>
         </div>
@@ -167,7 +175,7 @@
             </div>
           </div>
           <div class="card-footer px-0">
-            <a href="tvorba_ai.html" class="btn btn-primary w-100">ZJISTIT VÍCE <i
+            <a href="tvorba_ai.html" aria-label="Zjistit více o tvorbě webu s AI" class="btn btn-primary w-100">ZJISTIT VÍCE <i
                 class="fas fa-chevron-right ml-1"></i></a>
           </div>
         </div>
@@ -185,7 +193,7 @@
             </div>
           </div>
           <div class="card-footer px-0">
-            <a href="virtualni_asistence.html" class="btn btn-primary w-100">ZJISTIT VÍCE <i
+            <a href="virtualni_asistence.html" aria-label="Zjistit více o virtuální asistenci" class="btn btn-primary w-100">ZJISTIT VÍCE <i
                 class="fas fa-chevron-right ml-1"></i></a>
           </div>
         </div>
@@ -195,7 +203,7 @@
   </section>
 
   <section class="about dark-bg" id="omne">
-    <img src="obrazky/hlavni/logo_uni.png" alt="" class="watermark-logo watermark-left"
+    <img src="obrazky/hlavni/logo_uni.png" alt="" width="687" height="471" class="watermark-logo watermark-left"
       onerror="this.style.display='none'">
 
     <div class="container">
@@ -204,7 +212,7 @@
         <div class="about-image-wrapper">
           <div class="about-image-frame">
             <img src="obrazky/omne/lucie_louckova.jpg" alt="Lucie Loučková - Webařka & Virtuální asistentka"
-              class="about-img">
+              width="3024" height="4032" class="about-img">
           </div>
         </div>
 
@@ -290,9 +298,9 @@
         <!-- Projekt 1 -->
         <div class="project-row">
           <div class="project-image-side hover-lift">
-            <img src="obrazky/projekty/bicom.png" alt="Náhled webu Bicom" loading="lazy" class="project-img">
+            <img src="obrazky/projekty/bicom.png" alt="Náhled webu Bicom" width="1887" height="876" loading="lazy" class="project-img">
             <div class="project-overlay"><a href="https://bicom-zivotbezchemie.cz" target="_blank"
-                class="overlay-icon"><i class="fas fa-external-link-alt"></i></a></div>
+                aria-label="Otevřít web bicom-zivotbezchemie.cz" class="overlay-icon"><i class="fas fa-external-link-alt"></i></a></div>
           </div>
           <div class="project-content-side glass-panel glow-card hover-lift">
             <div class="project-info-top">
@@ -340,7 +348,7 @@
           <div class="project-image-side hover-lift">
             <img src="obrazky/projekty/webelo.png" alt="Náhled webu Webelo" loading="lazy" class="project-img"
               style="object-position: left;">
-            <div class="project-overlay"><a href="https://webelo.cz" target="_blank" class="overlay-icon"><i
+            <div class="project-overlay"><a href="https://webelo.cz" target="_blank" aria-label="Otevřít web webelo.cz" class="overlay-icon"><i
                   class="fas fa-external-link-alt"></i></a></div>
           </div>
           <div class="project-content-side glass-panel glow-card hover-lift">
@@ -375,7 +383,7 @@
   </section>
 
   <section class="testimonials dark-bg relative" id="reference">
-    <img src="obrazky/hlavni/logo_uni.png" alt="" class="watermark-logo watermark-right"
+    <img src="obrazky/hlavni/logo_uni.png" alt="" width="687" height="471" class="watermark-logo watermark-right"
       onerror="this.style.display='none'">
 
     <div class="container text-center reveal">
@@ -410,7 +418,7 @@
             </div>
           </div>
           <div class="client-gallery">
-            <img src="obrazky/reference/bicom.png" alt="Projekt Bicom" class="reference-img hover-lift">
+            <img src="obrazky/reference/bicom.png" alt="Projekt Bicom" width="1080" height="1080" class="reference-img hover-lift">
           </div>
         </div>
       </div>
@@ -534,7 +542,7 @@
       <div class="contact-grid reveal">
         <div class="contact-info glass-panel glow-border position-relative overflow-hidden">
           <div class="contact-header d-flex align-items-center gap-3 mb-3 position-relative z-1">
-            <div class="contact-icon"><img src="obrazky/omne/lucie_louckova.jpg" alt="Lucie Loučková"></div>
+            <div class="contact-icon"><img src="obrazky/omne/lucie_louckova.jpg" alt="Lucie Loučková" width="3024" height="4032"></div>
             <h3 class="h4 mb-0 text-white">Ing. Bc. Lucie Loučková</h3>
           </div>
 
@@ -613,11 +621,13 @@
     </div>
   </section>
 
+  </main>
+
   <footer class="site-footer bg-darker">
     <div class="container d-flex justify-content-between align-items-center">
       <div class="footer-brand d-flex align-items-center">
         <!-- Footer logo -->
-        <img src="obrazky/hlavni/logo_uni.png" alt="Logo Webelo" width="30" class="mr-3 opacity-50"
+        <img src="obrazky/hlavni/logo_uni.png" alt="Logo Webelo" width="30" height="21" class="mr-3 opacity-50"
           onerror="this.outerHTML='<div class=\'logo-icon-sm mr-2 text-white\'>L</div>'">
         <span class="text-white font-weight-bold letter-spacing-1">LUCIE LOUČKOVÁ <span class="text-gold mx-2">|</span>
           WEBELO</span>
