@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stránka nenalezena | Lucie Loučková</title>
+  <link rel="icon" type="image/png" href="obrazky/hlavni/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .notfound-content {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+      padding-top: 120px;
+      position: relative;
+      z-index: 1;
+    }
+    .notfound-number {
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--gold);
+      letter-spacing: -3px;
+    }
+  </style>
+</head>
+<body class="dark-bg">
+
+  <!-- Dekorativní prvky do pozadí -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-3"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="logo">
+        <img src="obrazky/hlavni/logo_menu.png" alt="Lucie Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="logo-icon fallback-logo" style="display: none;">L</div>
+        <div class="logo-text">
+          <span class="logo-name">Lucie</span>
+          <span class="logo-desc">WEBAŘKA & VIRTUÁLNÍ ASISTENTKA</span>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <main class="notfound-content">
+    <div class="container text-center reveal active">
+      <div class="glass-panel glow-card hover-lift p-4 mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <div class="notfound-number">404</div>
+        </div>
+        <div class="header-line mx-auto"></div>
+        <h1 class="mb-3" style="margin-top: 1rem; font-size: 1.6rem;">Stránka nenalezena</h1>
+        <p class="mb-4" style="color: rgba(255,255,255,0.75); font-size: 0.95rem;">
+          Tato stránka neexistuje nebo byla přesunuta.<br>Nevadí – cestu zpět najdeme.
+        </p>
+        <div class="mt-4">
+          <a href="index.html" class="btn btn-primary pulse-btn">
+            <i class="fas fa-arrow-left mr-2"></i> Zpět na úvodní stránku
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer bg-darker">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="footer-brand d-flex align-items-center">
+        <img src="obrazky/hlavni/logo_uni.png" alt="Lucie Logo" width="30" class="mr-3 opacity-50" onerror="this.outerHTML='<div class=\'logo-icon-sm mr-2 text-white\'>L</div>'">
+        <span class="text-white font-weight-bold letter-spacing-1">LUCIE LOUČKOVÁ <span class="text-gold mx-2">|</span> WEBELO</span>
+      </div>
+      <div class="footer-copyright text-white-80 small">
+        <p class="mb-0">&copy; 2026 Všechna práva vyhrazena.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

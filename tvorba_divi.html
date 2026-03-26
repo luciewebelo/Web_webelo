@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tvorba webu v Divi | Lucie Loučková</title>
+  <meta name="description"
+    content="Chceš web, který budeš moct sama spravovat, upravovat a postupně rozšiřovat? Postavím ti ho na WordPressu v Divi.">
+  <link rel="icon" type="image/png" href="obrazky/hlavni/favicon.png">
+  <link rel="canonical" href="https://webelo.cz/tvorba_divi.html">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Dekorativní prvky do pozadí -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="logo">
+        <img src="obrazky/hlavni/logo_menu.png" alt="Lucie Logo" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="logo-icon fallback-logo" style="display: none;">L</div>
+        <div class="logo-text">
+          <span class="logo-name">Lucie</span>
+          <span class="logo-desc">WEBAŘKA & VIRTUÁLNÍ ASISTENTKA</span>
+        </div>
+      </a>
+      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+      <nav class="nav-links">
+        <div class="nav-dropdown">
+          <a href="index.html#sluzby">Služby</a>
+          <div class="dropdown-menu">
+            <a href="tvorba_divi.html">Tvorba webu v Divi</a>
+            <a href="tvorba_ai.html">Tvorba webu s AI</a>
+            <a href="virtualni_asistence.html">Virtuální asistence</a>
+          </div>
+        </div>
+        <a href="index.html#omne">O mně</a>
+        <a href="index.html#projekty">Projekty</a>
+        <a href="index.html#reference">Reference</a>
+        <a href="index.html#cenik">Ceník</a>
+        <a href="#kontakt" class="btn btn-outline-nav">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero dark-bg" id="domu"
+    style="min-height: 80vh; padding-bottom: 2rem; display: flex; align-items: center;">
+    <div class="container hero-content" style="gap: 4rem;">
+
+      <div class="hero-left fade-in-up">
+        <div class="subheading">
+          <span class="line"></span> WEB, KTERÝ MÁŠ VE SVÝCH RUKOU
+        </div>
+        <h1 style="margin-bottom: 1.5rem;">Tvorba webu v Divi</h1>
+        <p style="margin-bottom: 2.5rem; font-size: 1.15rem; color: rgba(255,255,255,0.8);">
+          Chcete web, který budete moct sama spravovat a postupně rozšiřovat – bez závislosti na webaři? Postavím Vám ho
+          na WordPressu s vizuálním editorem Divi. Změnit fotku, přidat stránku nebo aktualizovat ceník zvládnete sama,
+          kdykoliv budete potřebovat.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-primary pulse-btn">MÁM ZÁJEM <i
+              class="fas fa-arrow-down ml-2 text-sm"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper fade-in-up delay-1">
+        <div class="image-inner" style="box-shadow: 0 10px 40px rgba(198, 156, 94, 0.15);">
+          <img src="obrazky/cenik/divi.jpg" alt="Tvorba webu v Divi" class="hero-image"
+            style="height: 500px; object-position: center;" onerror="this.style.display='none'">
+          <div class="gradient-overlay"></div>
+        </div>
+
+        <div class="glass-badge badge-tr float-anim"
+          style="background: rgba(255,255,255,0.92); border: 1px solid rgba(198,156,94,0.3); box-shadow: 0 8px 24px rgba(0,0,0,0.25); border-radius: 12px;">
+          <i class="fab fa-wordpress fa-lg text-gold"></i>
+          <div class="availability">
+            <strong style="color: #111a2c;">WordPress & Divi</strong>
+            <span style="color: #475569;">Vizuální editor</span>
+          </div>
+        </div>
+
+        <div class="glass-badge badge-bl float-anim-delayed-2">
+          <div class="status-dot"></div>
+          <div class="availability">
+            <strong>Nezávislost</strong>
+            <span>Správa ve tvých rukou</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="services light-bg" id="co-dostanes">
+    <div class="container reveal">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Co dostanete?</h2>
+        <div class="header-line mx-auto"></div>
+      </div>
+
+      <div class="service-cards-grid m-0"
+        style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+
+        <div class="glass-panel text-center p-4 hover-lift">
+          <div class="text-gold mb-3"><i class="fas fa-sitemap fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Návrh struktury a obsahu</h3>
+          <p class="mb-0">Spolu projdeme, co web potřebuje, a navrhnu logické uspořádání.</p>
+        </div>
+
+        <div class="glass-panel text-center p-4 hover-lift">
+          <div class="text-gold mb-3"><i class="fab fa-wordpress fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">WordPress & Divi</h3>
+          <p class="mb-0">Moderní, rozšířená platforma, se kterou si poradíte i bez technických znalostí. Web bude
+            vypadat dobře na počítači, tabletu i mobilu.</p>
+        </div>
+
+        <div class="glass-panel text-center p-4 hover-lift">
+          <div class="text-gold mb-3"><i class="fas fa-envelope-open-text fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Napojení na nástroje, které používáte
+          </h3>
+          <p class="mb-0">Formuláře, emailing, fakturace, rezervace – propojím web s nástroji, které používáte, aby vše
+            fungovalo dohromady.</p>
+        </div>
+
+        <div class="glass-panel text-center p-4 hover-lift">
+          <div class="text-gold mb-3"><i class="fas fa-search fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Základní SEO nastavení</h3>
+          <p class="mb-0">Web bude připravený tak, aby ho Google dokázal najít.</p>
+        </div>
+
+        <div class="glass-panel text-center p-4 hover-lift">
+          <div class="text-gold mb-3"><i class="fas fa-play-circle fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Video s návodem k obsluze</h3>
+          <p class="mb-0">Natočím Vám vlastní návod k ovládání webu - přímo na vašem webu — žádné cizí tutoriály, žádné
+            tápání.</p>
+        </div>
+
+        <div class="glass-panel text-center p-4 hover-lift" style="border: 2px solid var(--gold-subtle);">
+          <div class="text-gold mb-3"><i class="fas fa-tools fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Volitelně: Správa webu</h3>
+          <p class="mb-0">Aktualizace, zálohy, technická pohoda.<br><strong class="text-primary mt-2 d-inline-block">3×
+              ročně za 1 800 Kč/rok</strong></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about dark-bg" id="spoluprace">
+    <img src="obrazky/hlavni/logo_uni.png" alt="" class="watermark-logo watermark-left"
+      onerror="this.style.display='none'">
+    <div class="container reveal">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Jak spolupráce probíhá</h2>
+        <div class="header-line mx-auto"></div>
+      </div>
+
+      <div class="timeline-container mx-auto" style="max-width: 800px;">
+
+        <div class="timeline-row">
+          <div class="timeline-icon">1</div>
+          <div class="timeline-content glass-panel glow-border hover-lift">
+            <h3 class="text-gold h4" style="font-size: 1.5rem;">Úvodní konzultace</h3>
+            <p>Pokud jste v dosahu, ráda se setkám osobně — jinak se domluvíme na online callu. Během cca 2 hodin
+              projdeme Vaši představu, cílovou skupinu a obsah webu. Výsledkem bude kostra webu i s přibližným
+              rozvržením. Hned na místě také stanovíme pevnou cenu — zahrnuje vše, na čem se domluvíme.</p>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-icon">2</div>
+          <div class="timeline-content glass-panel glow-border hover-lift">
+            <h3 class="text-gold h4" style="font-size: 1.5rem;">Váš úkol - podklady</h3>
+            <p>Po konzultaci Vám pošlu přehledný dokument s úkoly: texty, fotografie, logo a další potřebné materiály.
+              Pokud budete mít málo fotek, pomůžu s výběrem z fotobanky. Po předání podkladů Vám pošlu první fakturu.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-icon">3</div>
+          <div class="timeline-content glass-panel glow-border hover-lift">
+            <h3 class="text-gold h4" style="font-size: 1.5rem;">Tvorba webu</h3>
+            <p>Jakmile obdržím vše potřebné, pustím se do práce — web bude hotový do jednoho měsíce. Nejdřív připravím
+              návrh hlavní sekce a ukážu Vám směr. Po schválení dopracuji celý web ve stejném duchu.</p>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-icon">4</div>
+          <div class="timeline-content glass-panel glow-border hover-lift">
+            <h3 class="text-gold h4" style="font-size: 1.5rem;">Předání webu</h3>
+            <p>Až vše doladíme, pošlu Vám fakturu. Po zaplacení web přemigruji na Vaši doménu a předám Vám přihlašovací
+              údaje. Přímo na Vašem webu pak natočím video, jak provádět základní úpravy — texty, obrázky a další.</p>
+          </div>
+        </div>
+
+        <div class="timeline-row">
+          <div class="timeline-icon">5</div>
+          <div class="timeline-content glass-panel glow-border hover-lift">
+            <h3 class="text-gold h4" style="font-size: 1.5rem;">Podpora po spuštění</h3>
+            <p>Po spuštění webu jsem Vám stále k dispozici. Ať už jde o drobné doladění, technický problém nebo něco
+              navíc — prostě se ozvěte.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing light-bg" id="cena">
+    <div class="container reveal">
+      <div class="contact-grid mb-5">
+        <div class="glow-card hover-lift"
+          style="background: var(--bg-white); border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--light-shadow);">
+          <h3 class="text-dark" style="font-size: 1.5rem; margin-bottom: 1rem;"><i
+              class="fas fa-check-circle text-gold mr-2"></i> Pro koho to je</h3>
+          <p>Pro podnikatelky, které chtějí mít web pod kontrolou – přidávat články, upravovat texty, přidávat služby –
+            bez závislosti na webaři.</p>
+        </div>
+        <div class="glow-card hover-lift"
+          style="background: var(--bg-white); border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--light-shadow);">
+          <h3 class="text-dark" style="font-size: 1.5rem; margin-bottom: 1rem;"><i
+              class="fas fa-times-circle text-muted mr-2" style="color: #94a3b8;"></i> Pro koho to není</h3>
+          <p>Pokud potřebujete web rychle a nepotřebujete ho průběžně spravovat, podívejte se na <a
+              href="tvorba_ai.html" class="text-gold font-weight-bold">tvorbu webu s AI</a> – web bude rychle spuštěný a
+            vyjde Vás to levněji.</p>
+        </div>
+      </div>
+
+      <div class="text-center p-5 glass-inner mx-auto rounded-xl position-relative overflow-hidden"
+        style="max-width: 800px; background: var(--bg-white); border: 2px solid var(--gold); box-shadow: 0 15px 40px rgba(198, 156, 94, 0.15);">
+        <div class="blob blob-1"
+          style="width: 300px; height: 300px; background: rgba(198, 156, 94, 0.1); top: -50%; right: -20%;"></div>
+
+        <h2 class="text-dark" style="margin-bottom: 0.5rem; font-size: 2rem;">Cena projektu</h2>
+        <div class="header-line mx-auto mb-4"></div>
+
+        <div class="price-box mb-4 border-0 d-flex justify-content-center align-items-baseline gap-2 pb-0">
+          <span class="currency" style="color: var(--text-dark-muted); font-size: 1.5rem;">od</span>
+          <span class="amount" style="color: var(--primary); font-size: 4rem; font-weight: 700; line-height: 1;">15
+            000</span>
+          <span class="currency" style="color: var(--text-dark-muted); font-size: 1.5rem;">Kč</span>
+        </div>
+        <div class="interval text-muted-gold mb-4"
+          style="text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">záloha 5 000 Kč, doplatek při
+          předání</div>
+
+        <a href="#kontakt" class="btn btn-primary pulse-btn mt-2"
+          style="font-size: 1.1rem; padding: 1rem 3rem; border-radius: 30px;">MÁM ZÁJEM <i
+            class="fas fa-arrow-right ml-2 text-dark"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact dark-bg" id="kontakt">
+    <div class="container">
+      <div class="contact-intro text-center mb-4 reveal">
+        <h2 class="section-title">Pojďme si promluvit</h2>
+        <div class="header-line mb-3 mx-auto"></div>
+        <p class="lead font-weight-bold text-white"><i class="fas fa-coffee text-gold mr-2"></i>Bez závazků, bez
+          složitostí.</p>
+        <p>Máte projekt, nápad nebo jen otázku? Napište mi – ozvu se co nejdříve.</p>
+      </div>
+
+      <div class="contact-grid reveal">
+        <div class="contact-info glass-panel glow-border position-relative overflow-hidden">
+          <div class="contact-header d-flex align-items-center gap-3 mb-3 position-relative z-1">
+            <div class="contact-icon"><img src="obrazky/omne/lucie_louckova.jpg" alt="Lucie Loučková"></div>
+            <h3 class="h4 mb-0 text-white">Ing. Bc. Lucie Loučková</h3>
+          </div>
+
+          <div class="contact-list position-relative z-1">
+            <div class="d-flex align-items-start mb-3 hover-icon-lift"
+              style="padding-bottom: 0.2rem; padding-top: 0.2rem;">
+              <div class="icon-box mr-3" style="min-width: 36px;"><i class="fas fa-envelope"></i></div>
+              <div class="contact-detail">
+                <span class="detail-label">Napište mi email</span>
+                <a href="mailto:lucie@webelo.cz" class="detail-value text-white">lucie@webelo.cz</a>
+              </div>
+            </div>
+            <div class="d-flex align-items-start mb-3 hover-icon-lift"
+              style="padding-bottom: 0.2rem; padding-top: 0.2rem;">
+              <div class="icon-box mr-3" style="min-width: 36px;"><i class="fab fa-facebook-f"></i></div>
+              <div class="contact-detail">
+                <span class="detail-label">Sledujte mě</span>
+                <a href="#" target="_blank" class="detail-value text-gold hover-underline">Lucie Loučková - Webelo <i
+                    class="fas fa-external-link-alt text-xs ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-details mt-3 pt-3 border-top position-relative z-1">
+            <div class="d-flex align-items-start mb-3 hover-icon-lift"
+              style="padding-bottom: 0.2rem; padding-top: 0.2rem;">
+              <div class="icon-box mr-3" style="min-width: 36px;"><i class="fas fa-id-card"></i></div>
+              <div class="contact-detail">
+                <span class="detail-label">IČO</span>
+                <strong class="detail-value text-white">02398087</strong>
+              </div>
+            </div>
+            <div class="d-flex align-items-start hover-icon-lift" style="padding-bottom: 0.2rem; padding-top: 0.2rem;">
+              <div class="icon-box mr-3" style="min-width: 36px;"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-detail">
+                <span class="detail-label">Fakturační adresa</span>
+                <span class="detail-value text-white">Banskobystrická 2081/9<br>Praha 6, 160 00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper glow-card form-float">
+          <div id="form-status" style="display: none; padding: 3rem 0; text-align: center;">
+            <div class="icon-box mx-auto mb-4" style="width: 70px; height: 70px; font-size: 2rem; border-radius: 50%;">
+              <i class="fas fa-check"></i>
+            </div>
+            <h3 class="text-white mb-3">Zpráva byla odeslána!</h3>
+            <p style="color: rgba(255,255,255,0.7);">Děkuji za Váš zájem. Ozvu se Vám zpět do 24 hodin.</p>
+          </div>
+          <div class="contact-header mb-4 d-flex align-items-center">
+            <h3 class="mb-0 text-white d-flex align-items-center"><i
+                class="fa-regular fa-paper-plane text-gold mr-2 fa-lg"></i> Napište mi zprávu</h3>
+          </div>
+          <form action="https://formspree.io/f/xlgpyzoq" method="POST" class="contact-form stylish-form"
+            id="contactForm">
+            <input type="hidden" name="_language" value="cs">
+            <div class="form-group floating-label">
+              <input type="text" id="name" name="name" required placeholder=" ">
+              <label for="name"><i class="fas fa-user mr-1"></i> Vaše jméno</label>
+            </div>
+            <div class="form-group floating-label">
+              <input type="email" id="email" name="email" required placeholder=" ">
+              <label for="email"><i class="fas fa-at mr-1"></i> E-mailová adresa</label>
+            </div>
+
+            <div class="form-group floating-label">
+              <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+              <label for="message"><i class="fas fa-pen mr-1"></i> S čím potřebujete pomoct?</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-2 btn-large">Odeslat zprávu <i
+                class="fas fa-paper-plane ml-2"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer bg-darker">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="footer-brand d-flex align-items-center">
+        <!-- Footer logo -->
+        <img src="obrazky/hlavni/logo_uni.png" alt="Lucie Logo" width="30" class="mr-3 opacity-50"
+          onerror="this.outerHTML='<div class=\'logo-icon-sm mr-2 text-white\'>L</div>'">
+        <span class="text-white font-weight-bold letter-spacing-1">LUCIE LOUČKOVÁ <span class="text-gold mx-2">|</span>
+          WEBELO</span>
+      </div>
+      <div class="footer-copyright text-white-80 small">
+        <p class="mb-0">&copy; 2026 Všechna práva vyhrazena.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

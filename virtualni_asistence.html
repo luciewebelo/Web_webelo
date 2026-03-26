@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtuální asistence | Lucie Loučková</title>
+  <meta name="description"
+    content="Techniku nechej na mně. Úpravy webů, nastavení nástrojů, emailing, Google Analytics a další. Virtuální asistence 700 Kč/hod.">
+  <link rel="icon" type="image/png" href="obrazky/hlavni/favicon.png">
+  <link rel="canonical" href="https://webelo.cz/virtualni_asistence.html">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .badge-tr {
+      top: 45% !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dekorativní prvky do pozadí -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="logo">
+        <img src="obrazky/hlavni/logo_menu.png" alt="Lucie Logo" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="logo-icon fallback-logo" style="display: none;">L</div>
+        <div class="logo-text">
+          <span class="logo-name">Lucie</span>
+          <span class="logo-desc">WEBAŘKA & VIRTUÁLNÍ ASISTENTKA</span>
+        </div>
+      </a>
+      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+      <nav class="nav-links">
+        <div class="nav-dropdown">
+          <a href="index.html#sluzby">Služby</a>
+          <div class="dropdown-menu">
+            <a href="tvorba_divi.html">Tvorba webu v Divi</a>
+            <a href="tvorba_ai.html">Tvorba webu s AI</a>
+            <a href="virtualni_asistence.html">Virtuální asistence</a>
+          </div>
+        </div>
+        <a href="index.html#omne">O mně</a>
+        <a href="index.html#projekty">Projekty</a>
+        <a href="index.html#reference">Reference</a>
+        <a href="index.html#cenik">Ceník</a>
+        <a href="#kontakt" class="btn btn-outline-nav">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero dark-bg" id="domu"
+    style="min-height: 80vh; padding-bottom: 2rem; display: flex; align-items: center;">
+    <div class="container hero-content" style="gap: 4rem;">
+
+      <div class="hero-left fade-in-up">
+        <div class="subheading">
+          <span class="line"></span> TECHNIKU NECHEJ NA MNĚ
+        </div>
+        <h1 style="margin-bottom: 1.5rem;">Virtuální asistence</h1>
+        <p style="margin-bottom: 2.5rem; font-size: 1.15rem; color: rgba(255,255,255,0.8);">
+          Máte web, máte nástroje, ale technické věci Vás zdržují od práce, která Vás baví. Přesně na to jsem tu.
+          Nemusíte vědět, jak to funguje — stačí říct, co potřebujete, a já to vyřeším.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-primary pulse-btn">MÁM ZÁJEM <i
+              class="fas fa-arrow-down ml-2 text-sm"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper fade-in-up delay-1">
+        <div class="image-inner" style="box-shadow: 0 10px 40px rgba(198, 156, 94, 0.15);">
+          <img src="obrazky/cenik/va.jpg" alt="Virtuální asistence" class="hero-image"
+            style="height: 500px; object-position: center;" onerror="this.style.display='none'">
+          <div class="gradient-overlay"></div>
+        </div>
+
+        <div class="glass-badge badge-tr float-anim"
+          style="background: rgba(255,255,255,0.92); border: 1px solid rgba(198,156,94,0.3); box-shadow: 0 8px 24px rgba(0,0,0,0.25); border-radius: 12px;">
+          <i class="fas fa-hands-helping fa-lg text-gold"></i>
+          <div class="availability">
+            <strong style="color: #111a2c;">Technická podpora</strong>
+            <span style="color: #475569;">Rychlé řešení</span>
+          </div>
+        </div>
+
+        <div class="glass-badge badge-bl float-anim-delayed-2">
+          <div class="status-dot"></div>
+          <div class="availability">
+            <strong>Flexibilně</strong>
+            <span>Jednorázově i opakovaně</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="services light-bg" id="co-dostanes">
+    <div class="container reveal">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">S čím ti pomůžu</h2>
+        <div class="header-line mx-auto"></div>
+      </div>
+
+      <div class="service-cards-grid m-0"
+        style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+
+        <div class="glass-panel text-center p-4 hover-lift">
+          <div class="text-gold mb-3"><i class="fas fa-edit fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Úpravy existujících webů</h3>
+          <p class="mb-0">Upravím texty, fotky nebo celou strukturu stránky</p>
+        </div>
+
+        <div class="glass-panel text-center p-4 hover-lift">
+          <div class="text-gold mb-3"><i class="fas fa-plus-circle fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Přidávání obsahu</h3>
+          <p class="mb-0">Přidám nové články, produkty nebo fotogalerie a správně je zařadím.</p>
+        </div>
+
+        <div class="glass-panel text-center p-4 hover-lift">
+          <div class="text-gold mb-3"><i class="fas fa-envelope-open-text fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Nastavení emailingu a nástrojů</h3>
+          <p class="mb-0">Nastavím a propojím emailingové nástroje, doladím automatizace i formuláře.</p>
+        </div>
+
+        <div class="glass-panel text-center p-4 hover-lift">
+          <div class="text-gold mb-3"><i class="fas fa-chart-line fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Správa domény a hostingu</h3>
+          <p class="mb-0">Pomohu s založením, nastavením i správou domény a hostingu.</p>
+        </div>
+
+        <div class="glass-panel text-center p-4 hover-lift">
+          <div class="text-gold mb-3"><i class="fas fa-lock fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Správa členských sekcí</h3>
+          <p class="mb-0">Pohlídám přístupy, obsah i technické zázemí členské sekce.</p>
+        </div>
+
+        <div class="glass-panel text-center p-4 hover-lift" style="border: 2px solid var(--gold-subtle);">
+          <div class="text-gold mb-3"><i class="fas fa-calendar-check fa-3x"></i></div>
+          <h3 class="text-dark" style="font-size: 1.3rem; margin-bottom: 0.5rem;">Rezervační systémy</h3>
+          <p class="mb-0">Nastavím a zprovozním rezervační systém přímo na Vašem webu.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about dark-bg" id="spoluprace">
+    <img src="obrazky/hlavni/logo_uni.png" alt="" class="watermark-logo watermark-left"
+      onerror="this.style.display='none'">
+    <div class="container reveal">
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Jak spolupráce probíhá</h2>
+        <div class="header-line mx-auto"></div>
+      </div>
+
+      <div class="text-center mx-auto" style="max-width: 680px;">
+        <p style="font-size: 1.15rem; color: rgba(255,255,255,0.85); line-height: 1.8; margin-bottom: 2rem;">
+          Virtuální asistence funguje jednoduše — napíšete mi, co potřebujete, a já se postarám o zbytek.
+          Nemusíte vědět, jak na to. Stačí popsat situaci a zbytek vyřešíme spolu.
+        </p>
+        <p style="color: rgba(255,255,255,0.65); margin-bottom: 2rem;">Chcete si nejdřív promluvit?</p>
+        <a href="#kontakt" class="btn btn-primary pulse-btn">Ozvěte se mi a domluvíme si krátký call <i
+            class="fas fa-arrow-down ml-2 text-sm"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing light-bg" id="cena">
+    <div class="container reveal">
+      <div class="contact-grid mb-5">
+        <div class="glow-card hover-lift"
+          style="background: var(--bg-white); border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--light-shadow);">
+          <h3 class="text-dark" style="font-size: 1.5rem; margin-bottom: 1rem;"><i
+              class="fas fa-check-circle text-gold mr-2"></i> Pro koho to je</h3>
+          <p>Pro podnikatelky, které mají web nebo nástroje rozjeté, ale nechtějí nebo nestíhají řešit techniku samy.
+            Hodí se jako jednorázová pomoc i jako pravidelná spolupráce.</p>
+        </div>
+        <div class="glow-card hover-lift"
+          style="background: var(--bg-white); border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--light-shadow);">
+          <h3 class="text-dark" style="font-size: 1.5rem; margin-bottom: 1rem;"><i
+              class="fas fa-times-circle text-muted mr-2" style="color: #94a3b8;"></i> Pro koho to není</h3>
+          <p>Pokud web teprve plánujete, podívejte se na <a href="tvorba_divi.html"
+              class="text-gold font-weight-bold">tvorbu webu v Divi</a> nebo <a href="tvorba_ai.html"
+              class="text-gold font-weight-bold">tvorbu webu s AI</a>.</p>
+        </div>
+      </div>
+
+      <div class="text-center p-5 glass-inner mx-auto rounded-xl position-relative overflow-hidden"
+        style="max-width: 800px; background: var(--bg-white); border: 2px solid var(--gold); box-shadow: 0 15px 40px rgba(198, 156, 94, 0.15);">
+        <div class="blob blob-1"
+          style="width: 300px; height: 300px; background: rgba(198, 156, 94, 0.1); top: -50%; right: -20%;"></div>
+
+        <h2 class="text-dark" style="margin-bottom: 0.5rem; font-size: 2rem;">Hodinová sazba</h2>
+        <div class="header-line mx-auto mb-4"></div>
+
+        <div class="price-box mb-4 border-0 d-flex justify-content-center align-items-baseline gap-2 pb-0">
+          <span class="amount"
+            style="color: var(--primary); font-size: 4rem; font-weight: 700; line-height: 1;">700</span>
+          <span class="currency" style="color: var(--text-dark-muted); font-size: 1.5rem;">Kč</span>
+        </div>
+        <div class="interval text-muted-gold mb-4"
+          style="text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">za hodinu</div>
+
+        <a href="#kontakt" class="btn btn-primary pulse-btn mt-2"
+          style="font-size: 1.1rem; padding: 1rem 3rem; border-radius: 30px;">MÁM ZÁJEM <i
+            class="fas fa-arrow-right ml-2 text-dark"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact dark-bg" id="kontakt">
+    <div class="container">
+      <div class="contact-intro text-center mb-4 reveal">
+        <h2 class="section-title">Pojďme si promluvit</h2>
+        <div class="header-line mb-3 mx-auto"></div>
+        <p class="lead font-weight-bold text-white"><i class="fas fa-coffee text-gold mr-2"></i>Bez závazků, bez
+          složitostí.</p>
+        <p>Máte projekt, nápad nebo jen otázku? Napište mi – ozvu se co nejdříve.</p>
+      </div>
+
+      <div class="contact-grid reveal">
+        <div class="contact-info glass-panel glow-border position-relative overflow-hidden">
+          <div class="contact-header d-flex align-items-center gap-3 mb-3 position-relative z-1">
+            <div class="contact-icon"><img src="obrazky/omne/lucie_louckova.jpg" alt="Lucie Loučková"></div>
+            <h3 class="h4 mb-0 text-white">Ing. Bc. Lucie Loučková</h3>
+          </div>
+
+          <div class="contact-list position-relative z-1">
+            <div class="d-flex align-items-start mb-3 hover-icon-lift"
+              style="padding-bottom: 0.2rem; padding-top: 0.2rem;">
+              <div class="icon-box mr-3" style="min-width: 36px;"><i class="fas fa-envelope"></i></div>
+              <div class="contact-detail">
+                <span class="detail-label">Napište mi email</span>
+                <a href="mailto:lucie@webelo.cz" class="detail-value text-white">lucie@webelo.cz</a>
+              </div>
+            </div>
+            <div class="d-flex align-items-start mb-3 hover-icon-lift"
+              style="padding-bottom: 0.2rem; padding-top: 0.2rem;">
+              <div class="icon-box mr-3" style="min-width: 36px;"><i class="fab fa-facebook-f"></i></div>
+              <div class="contact-detail">
+                <span class="detail-label">Sledujte mě</span>
+                <a href="#" target="_blank" class="detail-value text-gold hover-underline">Lucie Loučková - Webelo <i
+                    class="fas fa-external-link-alt text-xs ml-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-details mt-3 pt-3 border-top position-relative z-1">
+            <div class="d-flex align-items-start mb-3 hover-icon-lift"
+              style="padding-bottom: 0.2rem; padding-top: 0.2rem;">
+              <div class="icon-box mr-3" style="min-width: 36px;"><i class="fas fa-id-card"></i></div>
+              <div class="contact-detail">
+                <span class="detail-label">IČO</span>
+                <strong class="detail-value text-white">02398087</strong>
+              </div>
+            </div>
+            <div class="d-flex align-items-start hover-icon-lift" style="padding-bottom: 0.2rem; padding-top: 0.2rem;">
+              <div class="icon-box mr-3" style="min-width: 36px;"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-detail">
+                <span class="detail-label">Fakturační adresa</span>
+                <span class="detail-value text-white">Banskobystrická 2081/9<br>Praha 6, 160 00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper glow-card form-float">
+          <div id="form-status" style="display: none; padding: 3rem 0; text-align: center;">
+            <div class="icon-box mx-auto mb-4" style="width: 70px; height: 70px; font-size: 2rem; border-radius: 50%;">
+              <i class="fas fa-check"></i>
+            </div>
+            <h3 class="text-white mb-3">Zpráva byla odeslána!</h3>
+            <p style="color: rgba(255,255,255,0.7);">Děkuji za Váš zájem. Ozvu se Vám zpět do 24 hodin.</p>
+          </div>
+          <div class="contact-header mb-4 d-flex align-items-center">
+            <h3 class="mb-0 text-white d-flex align-items-center"><i
+                class="fa-regular fa-paper-plane text-gold mr-2 fa-lg"></i> Napište mi zprávu</h3>
+          </div>
+          <form action="https://formspree.io/f/xlgpyzoq" method="POST" class="contact-form stylish-form"
+            id="contactForm">
+            <input type="hidden" name="_language" value="cs">
+            <div class="form-group floating-label">
+              <input type="text" id="name" name="name" required placeholder=" ">
+              <label for="name"><i class="fas fa-user mr-1"></i> Vaše jméno</label>
+            </div>
+            <div class="form-group floating-label">
+              <input type="email" id="email" name="email" required placeholder=" ">
+              <label for="email"><i class="fas fa-at mr-1"></i> E-mailová adresa</label>
+            </div>
+
+            <div class="form-group floating-label">
+              <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+              <label for="message"><i class="fas fa-pen mr-1"></i> S čím potřebujete pomoct?</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-2 btn-large">Odeslat zprávu <i
+                class="fas fa-paper-plane ml-2"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer bg-darker">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="footer-brand d-flex align-items-center">
+        <img src="obrazky/hlavni/logo_uni.png" alt="Lucie Logo" width="30" class="mr-3 opacity-50"
+          onerror="this.outerHTML='<div class=\'logo-icon-sm mr-2 text-white\'>L</div>'">
+        <span class="text-white font-weight-bold letter-spacing-1">LUCIE LOUČKOVÁ <span class="text-gold mx-2">|</span>
+          WEBELO</span>
+      </div>
+      <div class="footer-copyright text-white-80 small">
+        <p class="mb-0">&copy; 2026 Všechna práva vyhrazena.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

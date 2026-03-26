@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"\\(Get-Content ''/c/Users/louck/OneDrive/Dokumenty/VC weby/webelo/Web_webelo/index.html'' -Encoding UTF8\\) -replace ''\\\\u201c'',''\"\"'' -replace ''\\\\u201d'',''\"\"'' | Set-Content ''/c/Users/louck/OneDrive/Dokumenty/VC weby/webelo/Web_webelo/index.html'' -Encoding UTF8\")"
+    ]
+  }
+}
