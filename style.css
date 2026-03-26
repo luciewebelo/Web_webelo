@@ -192,7 +192,7 @@ section { padding: 100px 0; }
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(198, 156, 94, 0.3);
 }
-.menu-toggle { display: none; background: none; border: none; color: var(--gold); font-size: 1.5rem; cursor: pointer; }
+.menu-toggle { display: none; background: none; border: none; color: var(--gold); font-size: 1.5rem; cursor: pointer; min-width: 44px; min-height: 44px; }
 
 /* Dropdown Služby */
 .nav-dropdown { position: relative; }
