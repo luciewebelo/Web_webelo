@@ -10,6 +10,16 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
+// Sticky navbar — přidání třídy .scrolled po odscrollování
+const navbar = document.getElementById('navbar');
+if (navbar) {
+    const onScroll = () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+}
+
 // Mobilní menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
