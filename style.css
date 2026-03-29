@@ -722,6 +722,10 @@ details[open] > .faq-question { color: #7a5c22; }
   from { opacity: 0; transform: translateX(-50%) translateY(16px); }
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
+@keyframes cookieFadeInMobile {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 .cookie-banner__label {
   font-size: 1.1rem;
   margin: 0 0 0.5rem;
@@ -757,6 +761,6 @@ details[open] > .faq-question { color: #7a5c22; }
 .cookie-btn--accept:hover { background: var(--gold-hover); }
 .cookie-btn--decline { background: transparent; color: var(--text); border: 1px solid rgba(198,156,94,0.3); }
 .cookie-btn--decline:hover { border-color: var(--gold); color: var(--text-white); }
-@media(max-width: 480px) {
-  .cookie-banner { right: 1rem; left: 1rem; bottom: 1rem; width: auto; }
+@media(max-width: 640px) {
+  .cookie-banner { right: 1rem; left: 1rem; bottom: 1rem; width: auto; transform: none; animation-name: cookieFadeInMobile; }
 }
