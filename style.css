@@ -525,7 +525,7 @@ details[open] > .faq-question { color: #7a5c22; }
   .faq-side-deco { display: none; }
 }
 @media (max-width: 768px) {
-  .faq-question { font-size: 0.95rem; padding: 1rem 0; }
+  .faq-question { font-size: 0.95rem; padding: 1rem 1.25rem; }
   .faq-answer { font-size: 0.9rem; }
 }
 
