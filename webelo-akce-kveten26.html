@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web, který má hlavu i patu | Webelo</title>
+  <meta name="description" content="Konzultace a tvorba webu, který skutečně funguje. Pomůžu vám s tím, co na webu má být, jak vypadá cesta potenciálního zákazníka a jak vznikne web, který přináší klienty.">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  </noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css">
+  </noscript>
+
+  <style>
+    /* ===== PAGE-SPECIFIC STYLES ===== */
+
+    body {
+      background: var(--bg-dark);
+    }
+
+    /* Serif italic pro dekorativní slova v nadpisu */
+    .serif-italic {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    /* "i" mezi hlavu/patu — stejný serif, ale bílá barva */
+    .serif-neutral-i {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--text-white);
+    }
+
+    /* ===== HERO ===== */
+    .sp-hero {
+      background: var(--bg-darker);
+      padding: 140px 0 80px;
+      position: relative;
+      min-height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+    }
+
+    .sp-hero::before {
+      content: '';
+      position: absolute;
+      top: -150px;
+      left: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(198,156,94,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .sp-subheading {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .sp-subheading .line {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .sp-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .sp-hero-text h1 {
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      color: var(--text-white);
+    }
+
+    .sp-hero-text .perex {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: rgba(203, 213, 225, 0.85);
+      max-width: 600px;
+    }
+
+    .sp-hero-text .perex strong {
+      color: var(--text-white);
+      font-weight: 600;
+    }
+
+    .sp-hero-text .perex p + p {
+      margin-top: 1rem;
+    }
+
+    /* ===== SECTION DIVIDER ===== */
+    .sp-section-connector {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      background: var(--bg-dark);
+    }
+
+    .sp-section-connector .dot-line {
+      width: 2px;
+      height: 60px;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(198,156,94,0.4) 0px,
+        rgba(198,156,94,0.4) 6px,
+        transparent 6px,
+        transparent 12px
+      );
+    }
+
+    /* ===== EDUCATIONAL SECTION ===== */
+    .sp-edu {
+      background: #f5efe6;
+      padding: 80px 0 100px;
+    }
+
+    .sp-edu .sp-edu-header h2 { color: var(--primary); }
+    .sp-edu .sp-section-label { color: #8a6520; }
+    .sp-edu .sp-section-label .line { background: #8a6520; }
+    .sp-edu .header-line { background: var(--gold); }
+
+    .sp-edu .sp-edu-card {
+      background: #ffffff;
+      border-color: rgba(198, 156, 94, 0.2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .sp-edu .sp-edu-card:hover {
+      border-color: rgba(198, 156, 94, 0.45);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+    .sp-edu .sp-edu-num { color: rgba(198, 156, 94, 0.8); }
+    .sp-edu .sp-edu-card h3 { color: var(--primary); }
+    .sp-edu .sp-edu-card p { color: #555; }
+
+    .sp-section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .sp-section-label .line {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .sp-edu-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .sp-edu-header h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .sp-edu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .sp-edu-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+
+    .sp-edu-card:hover {
+      border-color: rgba(198, 156, 94, 0.35);
+      transform: translateY(-6px);
+      box-shadow: var(--glow-shadow);
+    }
+
+    .sp-edu-num {
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(198, 156, 94, 0.8);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    .sp-edu-card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-white);
+    }
+
+    .sp-edu-card p {
+      font-size: 0.95rem;
+      color: rgba(203, 213, 225, 0.8);
+      line-height: 1.75;
+      margin-bottom: 0;
+    }
+
+    /* ===== OFFER SECTIONS ===== */
+    .sp-offer {
+      padding: 100px 0;
+    }
+
+    .sp-offer-konsult {
+      background: var(--bg-light);
+    }
+    .sp-offer-konsult .sp-offer-title { color: var(--primary); }
+    .sp-offer-konsult .sp-offer-subtitle { color: #666; }
+    .sp-offer-konsult .sp-offer-question { color: #8a6520; }
+    .sp-offer-konsult .sp-offer-card {
+      background: #ffffff;
+      border-color: rgba(198, 156, 94, 0.25);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    }
+    .sp-offer-konsult .sp-offer-name { color: var(--primary); }
+    .sp-offer-konsult .sp-offer-price { color: var(--gold); }
+    .sp-offer-konsult .sp-offer-desc { color: #555; border-bottom-color: rgba(0,0,0,0.06); }
+    .sp-offer-konsult .sp-offer-features li { color: #444; border-bottom-color: rgba(0,0,0,0.05); }
+    .sp-offer-konsult .sp-stat-box {
+      background: rgba(198, 156, 94, 0.08);
+      border-color: rgba(198, 156, 94, 0.2);
+    }
+    .sp-offer-konsult .sp-stat-box strong { color: #7a5c22; }
+    .sp-offer-konsult .sp-stat-box span { color: #888; }
+
+    .sp-offer-web {
+      background: var(--bg-dark);
+    }
+
+    .sp-offer-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .sp-offer-question {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .sp-offer-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      color: var(--text-white);
+    }
+
+    .sp-offer-subtitle {
+      font-size: 1rem;
+      color: rgba(203, 213, 225, 0.75);
+      margin-bottom: 2rem;
+    }
+
+    .sp-offer-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sp-offer-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .sp-offer-card-featured {
+      border-color: rgba(198, 156, 94, 0.3);
+      box-shadow: 0 0 40px rgba(198, 156, 94, 0.1);
+    }
+
+    .sp-offer-card-featured::before {
+      background: linear-gradient(90deg, var(--gold), rgba(198, 156, 94, 0.3), transparent);
+    }
+
+    .sp-offer-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-white);
+      margin-bottom: 0.5rem;
+    }
+
+    .sp-offer-price {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      line-height: 1;
+    }
+
+    .sp-offer-price span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(198, 156, 94, 0.7);
+      margin-left: 0.25rem;
+    }
+
+    .sp-offer-desc {
+      font-size: 0.95rem;
+      color: rgba(203, 213, 225, 0.8);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 1.5rem;
+    }
+
+    .sp-offer-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sp-offer-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: rgba(203, 213, 225, 0.85);
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .sp-offer-features li:last-child {
+      border-bottom: none;
+    }
+
+    .sp-offer-features .puzzle {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .sp-offer-features li .feature-body {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .sp-offer-features li .feature-body strong {
+      display: block;
+      font-weight: 600;
+    }
+
+    .sp-offer-features li .feature-body .feature-desc {
+      font-size: 0.9rem;
+      color: rgba(203, 213, 225, 0.7);
+      line-height: 1.6;
+    }
+
+    .sp-offer-konsult .sp-offer-features li .feature-body .feature-desc {
+      color: #666;
+    }
+
+    .sp-features-label {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+      margin-top: 0;
+    }
+
+    .sp-offer-konsult .sp-features-label {
+      color: #8a6520;
+    }
+
+    .sp-konsult-features {
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(198, 156, 94, 0.2);
+    }
+
+    .sp-offer-features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sp-offer-features-grid li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      background: #fff;
+      border: 1px solid rgba(198, 156, 94, 0.2);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      align-items: flex-start;
+      border-bottom: none;
+    }
+
+    .sp-feat-icon {
+      font-size: 1.3rem;
+      color: var(--gold);
+      width: 2.4rem;
+      height: 2.4rem;
+      background: rgba(198, 156, 94, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .sp-offer-features-grid li .feature-body {
+      gap: 0.3rem;
+    }
+
+    .sp-offer-features-grid li .feature-body strong {
+      font-size: 0.95rem;
+      color: var(--primary);
+    }
+
+    @media (max-width: 900px) {
+      .sp-offer-features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .sp-offer-features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .sp-offer-note {
+      font-size: 0.85rem;
+      color: rgba(203, 213, 225, 0.55);
+      margin-top: 1.25rem;
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* Visual side */
+    .sp-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .sp-visual-photo {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .sp-visual-photo img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border-radius: 20px;
+    }
+
+    .sp-visual-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 60%, rgba(9,15,26,0.6));
+      border-radius: 20px;
+    }
+
+    .sp-visual-stat {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .sp-stat-box {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+      min-width: 0;
+    }
+
+    .sp-stat-box strong {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+    }
+
+    .sp-stat-box span {
+      font-size: 0.8rem;
+      color: rgba(203, 213, 225, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .sp-cta {
+      background: #f5efe6;
+      padding: 100px 0;
+    }
+
+    .sp-cta-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .sp-cta-inner h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .sp-cta-inner .lead {
+      font-size: 1.05rem;
+      color: #666;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-sp-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--gold);
+      color: var(--bg-dark) !important;
+      padding: 1.1rem 2.8rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      margin-bottom: 3rem;
+      box-shadow: 0 8px 30px rgba(198, 156, 94, 0.3);
+    }
+
+    .btn-sp-cta:hover {
+      background: var(--gold-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(198, 156, 94, 0.4);
+      color: var(--bg-dark) !important;
+    }
+
+    /* Form */
+    .sp-form-wrap {
+      background: #ffffff;
+      border: 1px solid rgba(198, 156, 94, 0.25);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: left;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    }
+
+    .sp-form-wrap h3 {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+
+    .sp-form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .sp-form-group label {
+      display: block;
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+
+    .sp-form-group input,
+    .sp-form-group textarea {
+      width: 100%;
+      background: #f8f4ef;
+      border: 1px solid rgba(198, 156, 94, 0.3);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      color: var(--primary);
+      font-family: var(--font);
+      font-size: 0.95rem;
+      transition: border-color 0.3s, background 0.3s;
+      outline: none;
+    }
+
+    .sp-form-group input:focus,
+    .sp-form-group textarea:focus {
+      border-color: rgba(198, 156, 94, 0.6);
+      background: #ffffff;
+    }
+
+    .sp-form-group textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .sp-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .sp-form-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--bg-dark);
+      border: none;
+      border-radius: 10px;
+      padding: 1rem;
+      font-family: var(--font);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      margin-top: 0.5rem;
+    }
+
+    .sp-form-submit:hover {
+      background: var(--gold-hover);
+      transform: translateY(-2px);
+    }
+
+    .sp-form-privacy {
+      font-size: 0.8rem;
+      color: #aaa;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* Radio buttons – zájem o... */
+    .sp-radio-group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+      background: #f8f4ef;
+      border: 1px solid rgba(198, 156, 94, 0.3);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+    }
+
+    .sp-form-group .sp-radio-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+      font-size: 0.95rem;
+      color: #555;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 0;
+    }
+
+    .sp-radio-label input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+      min-height: 16px;
+      border: 2px solid rgba(198, 156, 94, 0.5);
+      border-radius: 50%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: transparent;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .sp-radio-label input[type="radio"]:checked {
+      border-color: var(--gold);
+      background: radial-gradient(circle at center, var(--gold) 38%, transparent 42%);
+    }
+
+    .sp-radio-label:hover input[type="radio"] {
+      border-color: rgba(198, 156, 94, 0.8);
+    }
+
+    #sp-form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    #sp-form-success .check-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(198, 156, 94, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin: 0 auto 1.5rem;
+    }
+
+    /* ===== AKCE CARD ===== */
+    .sp-akce-card {
+      background: rgba(198, 156, 94, 0.05);
+      border: 1.5px solid rgba(198, 156, 94, 0.35);
+      border-radius: 20px;
+      padding: 2.5rem 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      align-self: center;
+    }
+
+    .sp-akce-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), rgba(198, 156, 94, 0.2));
+    }
+
+    .sp-akce-big {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 5.5rem;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+    }
+
+    .sp-akce-sep {
+      width: 100%;
+      height: 1px;
+      background: rgba(198, 156, 94, 0.25);
+      margin-bottom: 1.5rem;
+    }
+
+    .sp-akce-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .sp-akce-row:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .sp-akce-name {
+      font-size: 0.9rem;
+      color: rgba(203, 213, 225, 0.75);
+      line-height: 1.4;
+    }
+
+    .sp-akce-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    .sp-akce-note {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(198, 156, 94, 0.15);
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(203, 213, 225, 0.4);
+      text-align: center;
+    }
+
+    /* ===== HERO BUTTONS ===== */
+    .sp-hero-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--bg-dark) !important;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 6px 24px rgba(198, 156, 94, 0.3);
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--gold-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(198, 156, 94, 0.4);
+      color: var(--bg-dark) !important;
+    }
+
+    .btn-hero-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--text-white) !important;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      border: 1.5px solid rgba(198, 156, 94, 0.5);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: border-color 0.3s, background 0.3s, transform 0.3s;
+    }
+
+    .btn-hero-secondary:hover {
+      border-color: var(--gold);
+      background: rgba(198, 156, 94, 0.08);
+      transform: translateY(-3px);
+      color: var(--text-white) !important;
+    }
+
+    /* ===== OFFER CONTACT BUTTON (light bg) ===== */
+    .btn-offer-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: var(--bg-dark) !important;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 6px 24px rgba(198, 156, 94, 0.3);
+      margin-top: 1.5rem;
+    }
+
+    .btn-offer-contact:hover {
+      background: var(--gold-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(198, 156, 94, 0.4);
+      color: var(--bg-dark) !important;
+    }
+
+    /* ===== UPSELL PŘECHOD ===== */
+    .sp-offer-upsell {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: rgba(203, 213, 225, 0.6);
+      font-style: italic;
+    }
+
+    .sp-offer-konsult .sp-offer-upsell {
+      color: #777;
+    }
+
+    .sp-offer-upsell a {
+      color: var(--gold);
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .sp-offer-upsell a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    /* ===== WEB VISUAL SIDE ===== */
+    .sp-web-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    @media (max-width: 900px) {
+      .sp-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .sp-akce-card {
+        display: none;
+      }
+
+      .sp-edu-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .sp-offer-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .sp-visual-photo img {
+        height: 300px;
+      }
+
+      .sp-form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .sp-visual-stat {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .sp-hero-actions {
+        flex-direction: column;
+      }
+
+      .btn-hero-primary,
+      .btn-hero-secondary {
+        justify-content: center;
+      }
+
+      .sp-hero {
+        min-height: 100svh;
+        padding: 2rem 0;
+      }
+
+      .sp-offer {
+        padding: 70px 0;
+      }
+
+      .sp-cta {
+        padding: 70px 0;
+      }
+
+      .sp-form-wrap {
+        padding: 1.75rem;
+      }
+
+      .sp-visual-stat {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <main>
+
+    <!-- SEKCE 1: Hero -->
+    <section class="sp-hero">
+      <div class="container">
+        <div class="sp-hero-inner">
+
+          <div class="sp-hero-text">
+            <div class="sp-subheading">
+              <span class="line"></span>
+              TVORBA WEBU
+            </div>
+            <h1>Web, který má <span class="serif-italic">hlavu <span class="serif-neutral-i">i</span> patu</span></h1>
+
+            <div class="perex">
+              <p>Tvorba mého vlastního webu mi trvala rok. A to jsem webařka.</p>
+              <p>Neměla jsem s kým řešit myšlenky. Nikdo mi nepomohl s texty, strukturou ani s tím, co na webu vůbec má být. Chyběl mi druhý pohled — někdo, kdo se zeptá: <strong>A co tím chceš říct? Jak má postupovat potenciální zákazník tvým webem?</strong></p>
+              <p>Přesně tohle rozhoduje o tom, jestli web funguje, nebo jen existuje.</p>
+            </div>
+
+            <div class="sp-hero-actions">
+              <a href="#konzultace" class="btn-hero-primary">
+                Call – návrh struktury
+              </a>
+              <a href="#tvorba-webu" class="btn-hero-secondary">
+                Chci tvorbu webu
+              </a>
+              <a href="#kontakt" class="btn-hero-primary">
+                Napište mi
+              </a>
+            </div>
+          </div>
+
+          <div class="sp-akce-card">
+            <div class="sp-akce-big">Akce</div>
+            <div class="sp-akce-sep"></div>
+            <div class="sp-akce-row">
+              <span class="sp-akce-name">Call s přípravou struktury webu</span>
+              <span class="sp-akce-price">1 500 Kč</span>
+            </div>
+            <div class="sp-akce-row">
+              <span class="sp-akce-name">Tvorba webu na klíč</span>
+              <span class="sp-akce-price">od 9 000 Kč</span>
+            </div>
+            <div class="sp-akce-note">Web hotový do 2 týdnů</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEKCE 2: Vzdělávací část -->
+    <section class="sp-edu">
+      <div class="container">
+
+        <div class="sp-edu-header">
+          <div class="sp-section-label" style="justify-content: center; margin-bottom: 1rem;">
+            <span class="line"></span>
+            JAK TO FUNGUJE
+          </div>
+          <h2>Co dělá web dobrým webem?</h2>
+          <div class="header-line mx-auto" style="margin-top: 1rem;"></div>
+        </div>
+
+        <div class="sp-edu-grid">
+
+          <div class="sp-edu-card">
+            <div class="sp-edu-num">01</div>
+            <h3>Musí být jasné, kam na webu dál</h3>
+            <p>Na web přicházejí dva typy lidí. Ten, kdo už ví, co chce, potřebuje to rychle najít a prokliknout se k akci (kontaktní formulář, prodejní formulář,...). A ten, kdo teprve zjišťuje, o čem web je a zvažuje, jestli by to bylo pro něj. Ten potřebuje číst více do hloubky, přemýšlet, porovnávat.</p>
+            <p style="margin-top: 1rem; margin-bottom: 0;">Úvodní stránka musí fungovat pro oba. Pokud někdo do několika vteřin nenajde, co hledá, odejde.</p>
+          </div>
+
+          <div class="sp-edu-card">
+            <div class="sp-edu-num">02</div>
+            <h3>Méně textu neznamená méně informací</h3>
+            <p>Stránku skenujeme pohledem a hledáme něco, co nás zaujme, co s námi rezonuje. A teprve pak se pustíme do čtení.</p>
+            <p style="margin-top: 1rem; margin-bottom: 0;">Proto není problém mít spoustu obsahu, ale musí být na správném místě. Podrobné vysvětlení patří na blog nebo na podstránky. Úvodní stránka má být přehledná, jasná a rychlá.</p>
+          </div>
+
+          <div class="sp-edu-card">
+            <div class="sp-edu-num">03</div>
+            <h3>Chybějící cesta zákazníka</h3>
+            <p>Na spoustě webů vidím totéž — informace tam jsou, ale není vymyšleno, co tam má člověk udělat. Kam jít, co kliknout, jak se dostat ke kontaktu. Web nemá strukturu, nemá jasnou cestu.</p>
+            <p style="margin-top: 1rem; margin-bottom: 0;">A přitom právě cesta vašeho potenciálního zákazníka rozhoduje o tom, jestli vám web přinese klienty, nebo jen hezky vypadá.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEKCE 3: Konzultace -->
+    <section class="sp-offer sp-offer-konsult" id="konzultace">
+      <div class="container">
+
+        <!-- Horní část: info vlevo, foto vpravo -->
+        <div class="sp-offer-inner">
+
+          <div>
+            <div class="sp-offer-question">NABÍDKA</div>
+            <h2 class="sp-offer-title">Tápete v tom,<br>jak má váš web vypadat?</h2>
+            <p class="sp-offer-subtitle">Nabízím konzultaci, díky které si ujasníte, co na webu budete mít.</p>
+
+            <div class="sp-offer-card">
+              <div class="sp-offer-name">Call s přípravou struktury webu</div>
+              <div class="sp-offer-price">1 500 Kč</div>
+              <p class="sp-offer-desc">Proběhne online a trvá většinou hodinu až dvě. Projdeme spolu úplně vše — co na webu musí být a co ne, jak web povede lidi a jak se dál rozvíjet.</p>
+            </div>
+
+            <p class="sp-offer-upsell">Potřebujete i web? Call je součástí tvorby, cena se nezapočítává zvlášť. <a href="#tvorba-webu">Více o tvorbě webu →</a></p>
+
+            <a href="#kontakt" class="btn-offer-contact">
+              Napište mi <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="sp-visual">
+            <div class="sp-visual-photo">
+              <img src="obrazky/omne/lucie_louckova.jpg" alt="Lucie Loučková – webařka" loading="lazy">
+            </div>
+            <div class="sp-visual-stat">
+              <div class="sp-stat-box">
+                <strong>1–2 hod</strong>
+                <span>délka konzultace</span>
+              </div>
+              <div class="sp-stat-box">
+                <strong>online</strong>
+                <span>odkudkoli</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Spodní část: co dostanete — 2 sloupce přes celou šířku -->
+        <div class="sp-konsult-features">
+          <p class="sp-features-label">Co dostanete:</p>
+          <ul class="sp-offer-features sp-offer-features-grid">
+            <li>
+              <i class="fas fa-lightbulb sp-feat-icon"></i>
+              <div class="feature-body">
+                <strong>Cenné rady</strong>
+                <span class="feature-desc">Řeknu vám, co na webu nesmí chybět a co je dobré na webu mít.</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-magnifying-glass sp-feat-icon"></i>
+              <div class="feature-body">
+                <strong>Konzultaci z pohledu zákazníka</strong>
+                <span class="feature-desc">Budu se vás ptát tak, jak by se ptal váš potenciální klient, a společně navrhneme cestu, kterou vaším webem projde.</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-file-lines sp-feat-icon"></i>
+              <div class="feature-body">
+                <strong>Podklady a navrženou strukturu webu</strong>
+                <span class="feature-desc">Konkrétní dokument, se kterým můžete dál pracovat a dopisovat texty.</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-pen-ruler sp-feat-icon"></i>
+              <div class="feature-body">
+                <strong>Rychlý vizuální návrh první stránky</strong>
+                <span class="feature-desc">Abyste rovnou viděli, jak by váš web mohl vypadat.</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-sitemap sp-feat-icon"></i>
+              <div class="feature-body">
+                <strong>Rozvržení celého webu</strong>
+                <span class="feature-desc">Promyslíme spolu nadpisy a jednotlivé sekce webu.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEKCE 4: Tvorba webu -->
+    <section class="sp-offer sp-offer-web" id="tvorba-webu">
+      <div class="container">
+
+        <div class="sp-offer-inner">
+
+          <!-- Levý sloupec: nadpis + ceník karta -->
+          <div>
+            <div class="sp-offer-question">CHCETE VÍC?</div>
+            <h2 class="sp-offer-title">Chcete mít vše<br>vyřešené na klíč?</h2>
+            <p class="sp-offer-subtitle">Pokud byste chtěly jít dál a nechat tvorbu webu na mně, ráda se o vše postarám.</p>
+
+            <div class="sp-offer-card sp-offer-card-featured">
+              <div class="sp-offer-name">Tvorba webu s AI včetně konzultace</div>
+              <div style="font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.25rem;">Akční cena</div>
+              <div class="sp-offer-price">od 9 000 Kč</div>
+              <p class="sp-offer-desc">Web hotový do dvou týdnů.</p>
+              <p class="sp-offer-note">Základní cena platí pro web o rozsahu 1–4 stránek. Další stránky, rezervační systém, emailing nebo blog lze doplnit za příplatek.</p>
+            </div>
+
+            <a href="#kontakt" class="btn-hero-primary" style="margin-top: 1.5rem; align-self: flex-start;">
+              Napište mi <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Pravý sloupec: co je v ceně + stat boxy -->
+          <div class="sp-web-visual">
+            <p class="sp-features-label">V ceně zahrnuto:</p>
+            <ul class="sp-offer-features">
+              <li>
+                <i class="fas fa-check" style="color: var(--gold); flex-shrink: 0; margin-top: 3px;"></i>
+                <span>Call s přípravou struktury webu</span>
+              </li>
+              <li>
+                <i class="fas fa-check" style="color: var(--gold); flex-shrink: 0; margin-top: 3px;"></i>
+                <span>Pomoc při tvorbě obsahu</span>
+              </li>
+              <li>
+                <i class="fas fa-check" style="color: var(--gold); flex-shrink: 0; margin-top: 3px;"></i>
+                <span>Designový návrh a úpravy podle vaší zpětné vazby</span>
+              </li>
+              <li>
+                <i class="fas fa-check" style="color: var(--gold); flex-shrink: 0; margin-top: 3px;"></i>
+                <span>Responzivní zobrazení na všech zařízeních</span>
+              </li>
+              <li>
+                <i class="fas fa-check" style="color: var(--gold); flex-shrink: 0; margin-top: 3px;"></i>
+                <span>Základní SEO</span>
+              </li>
+              <li>
+                <i class="fas fa-check" style="color: var(--gold); flex-shrink: 0; margin-top: 3px;"></i>
+                <span>Stránka 404</span>
+              </li>
+              <li>
+                <i class="fas fa-check" style="color: var(--gold); flex-shrink: 0; margin-top: 3px;"></i>
+                <span>Náhled pro sdílení na sociálních sítích</span>
+              </li>
+              <li>
+                <i class="fas fa-check" style="color: var(--gold); flex-shrink: 0; margin-top: 3px;"></i>
+                <span>Pomoc se zajištěním hostingu a domény</span>
+              </li>
+            </ul>
+            <div class="sp-visual-stat" style="margin-top: 2rem;">
+              <div class="sp-stat-box">
+                <strong>2 týdny</strong>
+                <span>hotový web</span>
+              </div>
+              <div class="sp-stat-box">
+                <strong>1–4</strong>
+                <span>stránky v ceně</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEKCE 5: CTA + formulář -->
+    <section class="sp-cta" id="kontakt">
+      <div class="container">
+
+        <div class="sp-cta-inner">
+          <h2>Napište mi</h2>
+          <p class="lead">Ozvu se co nejdříve a domluvíme se na dalším kroku.</p>
+
+          <div class="sp-form-wrap" id="kontakt-form">
+
+            <div id="sp-form-success">
+              <div class="check-icon"><i class="fas fa-check"></i></div>
+              <h3 style="color: var(--text-white); margin-bottom: 0.5rem;">Zpráva byla odeslána!</h3>
+              <p style="color: rgba(203,213,225,0.7); margin-bottom: 0;">Děkuji za zájem. Ozvu se vám zpět do 24 hodin.</p>
+            </div>
+
+            <div id="sp-form-body">
+              <h3><i class="fa-regular fa-paper-plane" style="color: var(--gold); margin-right: 0.5rem;"></i> Napište mi zprávu</h3>
+
+              <form action="https://formspree.io/f/xlgpyzoq" method="POST" id="sp-contact-form">
+                <input type="hidden" name="_language" value="cs">
+                <input type="hidden" name="_subject" value="Zájem – web hlava i pata">
+
+                <div class="sp-form-row">
+                  <div class="sp-form-group">
+                    <label for="sp-name">Vaše jméno</label>
+                    <input type="text" id="sp-name" name="name" required placeholder="Jana Nováková" autocomplete="name">
+                  </div>
+                  <div class="sp-form-group">
+                    <label for="sp-email">E-mailová adresa</label>
+                    <input type="email" id="sp-email" name="email" required placeholder="jana@example.cz" autocomplete="email">
+                  </div>
+                </div>
+
+                <div class="sp-form-group">
+                  <label>O co máte zájem? <span style="font-weight: 400; opacity: 0.6;">(vyberte)</span></label>
+                  <div class="sp-radio-group">
+                    <label class="sp-radio-label">
+                      <input type="radio" name="zajem" value="Konzultace" required>
+                      <span>Konzultace</span>
+                    </label>
+                    <label class="sp-radio-label">
+                      <input type="radio" name="zajem" value="Tvorba webu">
+                      <span>Tvorba webu</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="sp-form-group">
+                  <label for="sp-message">Chcete k tomu něco dodat? <span style="font-weight: 400; opacity: 0.6;">(nepovinné)</span></label>
+                  <textarea id="sp-message" name="message" rows="4" placeholder="Stručně popište váš projekt nebo co potřebujete řešit..."></textarea>
+                </div>
+
+                <button type="submit" class="sp-form-submit">
+                  Odeslat zprávu <i class="fas fa-paper-plane" style="margin-left: 0.5rem;"></i>
+                </button>
+              </form>
+
+              <p class="sp-form-privacy">Kontaktní údaje slouží pouze pro zpracování vašich dotazů a případně k domluvě spolupráce.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js" defer></script>
+  <script>
+    (function () {
+      var form = document.getElementById('sp-contact-form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var data = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            document.getElementById('sp-form-body').style.display = 'none';
+            document.getElementById('sp-form-success').style.display = 'block';
+          }
+        }).catch(function () {
+          form.submit();
+        });
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
