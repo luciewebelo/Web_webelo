@@ -2,10 +2,11 @@ ErrorDocument 404 /404.html
 
 # Odstranění .html z URL
 Options -MultiViews
+DirectorySlash Off
 RewriteEngine On
 
 # Speciální pravidlo pro /blog, protože existuje fyzická složka "blog"
-# Zabrání 403 Forbidden chybě při pokusu o zobrazení obsahu složky
+# Zabrání 403 Forbidden chybě a smyčce přesměrování (díky DirectorySlash Off)
 RewriteRule ^blog$ blog.html [NC,L]
 RewriteRule ^blog/$ /blog [R=301,NC,L]
 
