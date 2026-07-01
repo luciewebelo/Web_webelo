@@ -261,3 +261,58 @@ Pokud web teprve plánuješ, podívej se na tvorbu webu v Divi nebo s AI.
 
 **700 Kč · za hodinu**
 **Tlačítko:** [MÁM ZÁJEM]
+
+---
+
+## Blog
+
+### Soubory
+- **Seznam článků:** `blog.html` — přidávejte karty nových článků dovnitř `.blog-grid`
+- **Složka článků:** `blog/` — každý článek je samostatný `.html` soubor
+- **Vzorový článek:** `blog/proc-nestaci-jen-instagram.html`
+- **Obrázky článků:** ukládejte do `obrazky/blog/`
+
+### Jak přidat nový článek
+
+**1. Vytvořte HTML soubor článku**
+Zkopírujte soubor `blog/proc-nestaci-jen-instagram.html` a přejmenujte ho (URL-friendly, bez diakritiky, pomlčky místo mezer).
+Upravte v něm:
+- `<title>` a `<meta name="description">`
+- `og:url`, `og:title`, `og:description`
+- Strukturovaná data `BlogPosting` — `headline`, `description`, `url`, `datePublished`
+- Obsah `<h1>`, `article-lead`, `article-body`
+- Datum v `article-meta`
+- `<link rel="canonical">`
+- Sekci `article-nav` — doplňte odkaz na předchozí článek
+
+**2. Přidejte kartu na blog.html**
+Zkopírujte blok `<article class="blog-card glow-card">` a vložte ho na začátek `.blog-grid` (nové články jsou první). Upravte:
+- Tag kategorie (`.tag`)
+- Datum
+- `<h3>` — název článku
+- `<p>` — krátký popis
+- `href` odkazu "Číst článek"
+
+Pokud máte obrázek (`obrazky/blog/nazev.jpg`), smažte `blog-card-img-placeholder` a odkomentujte `<img class="blog-card-img">`.
+
+**3. Aktualizujte sitemap.xml**
+Přidejte nový `<url>` blok s adresou článku, datem a `priority 0.6`.
+
+**4. Propojte články**
+V předchozím článku doplňte sekci `article-nav`:
+```html
+<a href="/blog/nazev-noveho-clanku" class="article-nav-item next">
+  <span class="article-nav-label">Další článek</span>
+  <span class="article-nav-title">Název nového článku →</span>
+</a>
+```
+V novém článku přidejte odkaz zpět na předchozí:
+```html
+<a href="/blog/nazev-predchoziho" class="article-nav-item">
+  <span class="article-nav-label">← Předchozí článek</span>
+  <span class="article-nav-title">Název předchozího článku</span>
+</a>
+```
+
+### Vykání
+Na webu se vyká (Vám, Váš, Vás, máte, jste...). Vykejte i v textech článků všude, kde se obracíte na čtenářku.
