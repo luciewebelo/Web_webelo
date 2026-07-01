@@ -5,6 +5,11 @@ Options -MultiViews
 DirectorySlash Off
 RewriteEngine On
 
+# Přesměrování z WWW na verzi bez WWW
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+
 # Speciální pravidlo pro /blog, protože existuje fyzická složka "blog"
 # Zabrání 403 Forbidden chybě a smyčce přesměrování (díky DirectorySlash Off)
 RewriteRule ^blog$ blog.html [NC,L]

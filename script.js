@@ -37,6 +37,19 @@ const formHeader = document.querySelector('.contact-form-wrapper .contact-header
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
+        
+        // Kontrola honeypot pole proti spamu
+        const honeypot = contactForm.querySelector('input[name="_gotcha"]');
+        if (honeypot && honeypot.value) {
+            console.warn('Spam detected via honeypot.');
+            // Předstíráme úspěšné odeslání pro spambota
+            contactForm.style.display = 'none';
+            if (formHeader) formHeader.style.display = 'none';
+            formStatus.style.display = 'block';
+            formStatus.classList.add('fade-in-up');
+            return;
+        }
+        
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
         
