@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(kill %1)",
-      "PowerShell(Add-Type -AssemblyName System.Drawing; $files = @\\('obrazky\\\\projekty\\\\martinakaldova.png','obrazky\\\\projekty\\\\zuzanamokrosova.png'\\); foreach \\($f in $files\\) { $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $f\\)\\); \"$f : $\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\) })"
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $files = @\\('obrazky\\\\projekty\\\\martinakaldova.png','obrazky\\\\projekty\\\\zuzanamokrosova.png'\\); foreach \\($f in $files\\) { $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $f\\)\\); \"$f : $\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\) })",
+      "Bash(npx --version)",
+      "Bash(chromium-cli --help)",
+      "Bash(grep -v '^\\\\./index.html$')",
+      "Bash(sed -i 's/style\\\\.css?v=19/style.css?v=26/' blog.html)",
+      "Bash(sed -i 's/style\\\\.css?v=19/style.css?v=26/' blog/proc-nestaci-jen-instagram.html)",
+      "Bash(sed -i 's/style\\\\.css?v=23/style.css?v=26/' blog/kolik-pluginu-je-prilis.html)"
     ]
   }
 }
