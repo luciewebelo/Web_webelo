@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(kill %1)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $files = @\\('obrazky\\\\projekty\\\\martinakaldova.png','obrazky\\\\projekty\\\\zuzanamokrosova.png'\\); foreach \\($f in $files\\) { $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $f\\)\\); \"$f : $\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\) })"
+    ]
+  }
+}

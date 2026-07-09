@@ -16,7 +16,10 @@
       "Bash(powershell -Command \"$path = ''c:\\\\Users\\\\louck\\\\OneDrive\\\\Dokumenty\\\\VC weby\\\\webelo\\\\Web_webelo\\\\sitemap.xml''; $bytes = [System.IO.File]::ReadAllBytes\\($path\\); $bytes[0].ToString\\(''X2''\\) + '' '' + $bytes[1].ToString\\(''X2''\\) + '' '' + $bytes[2].ToString\\(''X2''\\)\")",
       "Bash(xxd \"c:/Users/louck/OneDrive/Dokumenty/VC weby/webelo/Web_webelo/sitemap.xml\")",
       "Bash(curl -i https://webelo.cz/sitemap.xml)",
-      "Bash(curl -i https://webelo.cz/)"
+      "Bash(curl -i https://webelo.cz/)",
+      "Bash(powershell -Command \"Get-Item 'obrazky/projekty/danabecickova.png','obrazky/projekty/petramaryskova.png' | Select Name,Length\")",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $files = @\\('obrazky\\\\projekty\\\\danabecickova.png','obrazky\\\\projekty\\\\petramaryskova.png','obrazky\\\\danabecicksmazatova.png'\\); foreach \\($f in $files\\) { if \\(Test-Path $f\\) { $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $f\\)\\); \"$f : $\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\) } else { \"$f : not found\" } })",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $files = @\\('obrazky\\\\projekty\\\\bicom.png','obrazky\\\\projekty\\\\madero.png','obrazky\\\\projekty\\\\webelo.png'\\); foreach \\($f in $files\\) { if \\(Test-Path $f\\) { $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $f\\)\\); \"$f : $\\($img.Width\\) x $\\($img.Height\\)\"; $img.Dispose\\(\\) } })"
     ]
   }
 }
