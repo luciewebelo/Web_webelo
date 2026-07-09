@@ -1073,6 +1073,10 @@ details[open] > .faq-question { color: #7a5c22; }
   color: var(--primary);
 }
 
+.article-light .article-body ul.article-list li {
+  color: var(--text-dark);
+}
+
 .article-light .article-body p.article-intro {
   font-size: 1.15rem;
   font-weight: 500;
