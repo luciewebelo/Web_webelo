@@ -10,6 +10,15 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
+// Automatické spuštění posunu náhledu projektu, jakmile je ve výřezu (funguje i na dotykových zařízeních)
+const previewObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("in-view", entry.isIntersecting);
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll(".scroll-preview").forEach(el => previewObserver.observe(el));
+
 // Sticky navbar — přidání třídy .scrolled po odscrollování
 const navbar = document.getElementById('navbar');
 if (navbar) {
