@@ -924,6 +924,14 @@ details[open] > .faq-question { color: #7a5c22; }
   padding-left: 0.3rem;
 }
 
+.article-blockquote ul.article-list.article-list-highlight {
+  margin-bottom: 0;
+}
+
+.article-blockquote ul.article-list.article-list-highlight li:last-child {
+  margin-bottom: 0;
+}
+
 /* Blockquote / zvýrazněná citace */
 .article-blockquote {
   border-left: 3px solid var(--gold);
