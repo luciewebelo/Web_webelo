@@ -742,6 +742,17 @@ details[open] > .faq-question { color: #7a5c22; }
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
+  display: block;
+}
+
+.blog-card-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.blog-card-title-link:hover {
+  color: var(--gold);
 }
 
 .blog-card-img-placeholder {
