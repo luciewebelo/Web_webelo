@@ -11,7 +11,8 @@
       "Bash(sed -i 's/style\\\\.css?v=23/style.css?v=26/' blog/kolik-pluginu-je-prilis.html)",
       "WebSearch",
       "Bash(powershell -c '$env:ELEVENLABS_API_KEY = [System.Environment]::GetEnvironmentVariable\\('\\\\''ELEVENLABS_API_KEY'\\\\'','\\\\''User'\\\\''\\); & \"$env:USERPROFILE\\\\.local\\\\bin\\\\uvx.exe\" elevenlabs-mcp')",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://formspree.io/f/xlgpyzoq)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://formspree.io/f/xlgpyzoq)",
+      "Bash(curl -sI https://webelo.cz)"
     ]
   }
 }
