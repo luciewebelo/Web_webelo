@@ -12,7 +12,18 @@
       "WebSearch",
       "Bash(powershell -c '$env:ELEVENLABS_API_KEY = [System.Environment]::GetEnvironmentVariable\\('\\\\''ELEVENLABS_API_KEY'\\\\'','\\\\''User'\\\\''\\); & \"$env:USERPROFILE\\\\.local\\\\bin\\\\uvx.exe\" elevenlabs-mcp')",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://formspree.io/f/xlgpyzoq)",
-      "Bash(curl -sI https://webelo.cz)"
+      "Bash(curl -sI https://webelo.cz)",
+      "Bash(git fetch *)",
+      "Bash(git log *)",
+      "Bash(python3 -c ' *)",
+      "Bash(npx playwright *)",
+      "Bash(where python *)",
+      "Bash(where python3 *)",
+      "Bash(where node *)",
+      "Bash(where npm *)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Bash(cp \"obrazky/hlavni/og-image.png\" \"obrazky/hlavni/og-image-old-backup.png\")",
+      "Bash(cp \"/c/Users/louck/AppData/Local/Temp/claude/c--Users-louck-OneDrive-Dokumenty-VC-weby-webelo-web-webelo/d02f7edb-e77e-4c6f-bd1b-cf04844b7f7b/scratchpad/og-image-preview.png\" \"obrazky/hlavni/og-image.png\")"
     ]
   }
 }
